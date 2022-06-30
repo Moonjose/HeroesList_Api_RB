@@ -5,7 +5,7 @@ module Authenticable
         @token ||= request.headers['Authorization']
 
         unless valid_token?
-            render json: {errors: 'Você não tem autorização para realizar essa operação'},
+            render json: {errors: 'Forneça um header Authorization para se identificar(com mais de 10 caracteres)'},
                    status: :unauthorized
         end
     end
@@ -13,6 +13,6 @@ module Authenticable
     
 
     def valid_token?
-        @token.present? && @token == Rails.application.credentials.token
+        @token.present? && @token.size >= 10
     end
 end
