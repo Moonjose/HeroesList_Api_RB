@@ -1,4 +1,8 @@
-# Tour Of Heroes API
+# Funcionalidades do projeto
+
+* CRUD básico de heróis com front desacoplado
+
+# Dev Informations
 
 Ruby on Rails 6 course as an API creating a Heroes CRUD.
 
